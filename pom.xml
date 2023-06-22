@@ -170,6 +170,30 @@
         </configuration>
       </plugin>
 
+<configuration>
+  <container>
+    <containerId>tomcat9x</containerId>
+    <type>installed</type>
+    <home>${tomcat.home}</home>
+  </container>
+  <configuration>
+    <type>existing</type>
+    <home>${tomcat.home}/conf</home>
+  </configuration>
+  <deployables>
+    <deployable>
+      <groupId>com.mt</groupId>
+      <artifactId>maven-web-application</artifactId>
+      <type>war</type>
+      <pingURL>http://65.2.78.58:${cargo.servlet.port}/${cargo.servlet.context}</pingURL>
+      <pingTimeout>30000</pingTimeout>
+      <properties>
+        <cargo.servlet.port>8080</cargo.servlet.port>
+        <cargo.servlet.context>maven-web-application</cargo.servlet.context>
+      </properties>
+    </deployable>
+  </deployables>
+</configuration>
 
 
   <!-- Other project configurations -->
