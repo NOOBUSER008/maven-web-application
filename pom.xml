@@ -147,9 +147,7 @@
 				</configuration>
 			</plugin>
 
-  <build>
-    <plugins>
-      <!-- Configure the Maven Deploy Plugin -->
+  
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-deploy-plugin</artifactId>
@@ -171,8 +169,8 @@
           <path>/maven-web-application</path>
         </configuration>
       </plugin>
-    </plugins>
-  </build>
+
+
 
   <!-- Other project configurations -->
 
