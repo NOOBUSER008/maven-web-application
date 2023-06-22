@@ -146,6 +146,37 @@
 					<wtpContextName>maven-web-application</wtpContextName>
 				</configuration>
 			</plugin>
+
+  <build>
+    <plugins>
+      <!-- Configure the Maven Deploy Plugin -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-deploy-plugin</artifactId>
+        <version>3.0.0-M1</version>
+        <configuration>
+          <skip>true</skip>
+        </configuration>
+      </plugin>
+
+      <!-- Configure the Maven Tomcat Plugin -->
+      <plugin>
+        <groupId>org.apache.tomcat.maven</groupId>
+        <artifactId>tomcat7-maven-plugin</artifactId>
+        <version>2.2</version>
+        <configuration>
+          <url>http://65.2.78.58:8080/manager/text</url>
+          <username>phani</username>
+          <password>phani@123</password>
+          <path>/maven-web-application</path>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+
+  <!-- Other project configurations -->
+
+
 			
 </plugins>
 	</build>
